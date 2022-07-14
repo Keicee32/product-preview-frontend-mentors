@@ -106,9 +106,15 @@ h1 {
     font-weight: 700;
     background-color: hsl(158, 36%, 37%);
     color: hsl(0, 0%, 100%);
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: hsl(158, 72%, 15%);
 }
 
 @media screen and (min-width: 600px) {
