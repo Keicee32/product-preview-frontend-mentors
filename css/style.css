@@ -1,0 +1,140 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.uppercase,
+h1 {
+    margin-top: 0;
+}
+
+.bold-text,
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+h1 {
+    line-height: 1.2;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+}
+
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+/* ==== LAYOUT ==== */
+.container {
+    line-height: 1.7;
+    width: 90%;
+    max-width: 620px;
+    margin: 2em auto 1em;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.img-container {
+    background-image: url('../images/image-product-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-basis: 250px;
+    min-width: 0;
+    min-height: 0;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.content-container {
+    padding: 2em;
+}
+
+.price {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.bold-text {
+    color: hsl(158, 36%, 37%);
+}
+
+.strike-through {
+    align-self: center;
+    margin-left: 2em;
+    text-decoration: line-through;
+}
+
+.cart-img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 1.4em 5em;
+    border-radius: 10px;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .img-container {
+        background-image: url('../images/image-product-desktop.jpg');
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    
+    .img-container,
+    .content-container {
+        width: 50%;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+}
